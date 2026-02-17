@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>pony的名片</title>
+  <!-- 下面三个meta是给QQ看的，让它抓取图片和标题，显示成大卡片 -->
+  <meta property="og:title" content="pony的名片" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="https://bdkzyg.github.io/camera/pony_card.jpg" />
+  <!-- 这是跳转指令：让页面一加载就尝试打开QQ相机 -->
+  <meta http-equiv="refresh" content="0; url=mqqapi://camera/open?camera=front">
+</head>
+<body>
+  <!-- 如果上面的meta跳转失败，用JavaScript再跳一次 -->
+  <script>
+    window.location.href = "mqqapi://camera/open?camera=front";
+  </script>
+  <!-- 显示一行提示文字（基本看不到） -->
+  <p>正在启动相机，请稍候...</p>
+</body>
+</html>
